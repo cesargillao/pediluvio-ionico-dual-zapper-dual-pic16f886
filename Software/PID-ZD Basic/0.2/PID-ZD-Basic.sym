@@ -1,0 +1,231 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+005.2   BArriba
+005.3   BAbajo
+005.5   BIzquierda
+005.7   BDerecha
+006     lcdlat
+006     lcd
+007.0   PediluvioA
+007.3   PediluvioB
+007.4   Buzzer
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C-02D L1
+02E-02F L2
+030-033 AmperajeA
+034-037 AmperajeB
+038     C1
+039     S1
+03A     C2
+03B     S2
+03C.0   OperandoA
+03C.1   OperandoB
+03C.2   ExcesoA
+03C.3   ExcesoB
+03C.4   Periodo
+03C.5   AscDesc
+03C.6   i
+03D     ReposicionA
+03E     ReposicionB
+03F-040 Terapia
+041-042 Tiempo
+043     Zapper
+044     @TRIS_C
+045-048 @FLT.P1
+045     lcd_init.i
+045-048 @PRINTF_L32D_639FPFPF.P1
+045     @PRINTF_U_639.P2
+045-046 @ITOF.P3
+045     LeerTemp.@SCRATCH1
+045     FreqAcordeon.@SCRATCH1
+045     Operatividad.@SCRATCH1
+045     @PSTRINGC7_639.@SCRATCH1
+045     MAIN.@SCRATCH1
+046     @PRINTF_U_639.P1
+046-049 lcd_init.LCD_INIT_STRING
+046     LeerTemp.@SCRATCH2
+046     @PSTRINGC7_639.@SCRATCH2
+046     MAIN.@SCRATCH2
+047     @DIV88.P1
+047     LeerTemp.@SCRATCH3
+047     @PSTRINGC7_639.@SCRATCH3
+048     @DIV88.P1
+048     LeerTemp.@SCRATCH4
+048     @PSTRINGC7_639.@SCRATCH4
+049     @PRINTF_L32D_639FPFPF.P1
+049-04C @FLT.P2
+049-04C @DIVFF.P3
+049     @DIV88.@SCRATCH1
+04A     lcd_init.@SCRATCH1
+04A     @PRINTF_L32D_639FPFPF.@SCRATCH1
+04B     @PRINTF_L32D_639FPFPF.@SCRATCH2
+04C     @PRINTF_L32D_639FPFPF.@SCRATCH3
+04D-050 @DIVFF.P1
+04D     @PRINTF_L32D_639FPFPF.@SCRATCH4
+04D     @FLT.@SCRATCH1
+04E     @PRINTF_L32D_639FPFPF.@SCRATCH5
+04E     @FLT.@SCRATCH2
+04F     @PRINTF_L32D_639FPFPF.@SCRATCH6
+050     @PRINTF_L32D_639FPFPF.@SCRATCH7
+051     @DIVFF.@SCRATCH1
+051     @PRINTF_L32D_639FPFPF.@SCRATCH8
+052-055 @MULFF.P1
+052     lcd_putc.c
+052-055 @FTOSD.P1
+052-055 @DIV3232.P2
+052     @DIVFF.@SCRATCH2
+053     lcd_gotoxy.x
+053     @delay_ms1.P1
+053     @DIVFF.@SCRATCH3
+054     lcd_gotoxy.y
+054     @DIVFF.@SCRATCH4
+055     lcd_gotoxy.address
+055     @DIVFF.@SCRATCH5
+056-059 @MULFF.P1
+056-059 @DIV3232.P2
+056     lcd_gotoxy.@SCRATCH1
+056     @DIVFF.@SCRATCH6
+056     @FTOSD.@SCRATCH1
+057     lcd_send_byte.address
+058     lcd_send_byte.n
+059     lcd_read_byte.low
+059     lcd_send_byte.@SCRATCH1
+05A     lcd_read_byte.high
+05A     lcd_send_nibble.n
+05A     @MULFF.@SCRATCH1
+05A     @DIV3232.@SCRATCH1
+05B     lcd_read_byte.@SCRATCH1
+05B     @MULFF.@SCRATCH2
+05B     @DIV3232.@SCRATCH2
+05C     @MULFF.@SCRATCH3
+05C     @DIV3232.@SCRATCH3
+05D     @MULFF.@SCRATCH4
+05D     @DIV3232.@SCRATCH4
+05E     @MULFF.@SCRATCH5
+05E     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+086     lcdtris
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00004F  FreqOFF
+000066  timer
+0000B6  @const715.call
+0000BF  @const717.call
+0000C8  @delay_ms1
+0000DD  lcd_send_nibble
+0000EF  lcd_read_nibble
+0000F5  lcd_send_byte
+0000FD  lcd_read_byte
+000150  lcd_init
+000195  @ITOF
+0001B2  @MULFF
+000227  @DIVFF
+0002F1  lcd_gotoxy
+000303  lcd_putc
+00032F  @DIV88
+000344  @PRINTF_U_639
+000379  @DIV3232
+0003C8  @PRINTF_L32D_639FPFPF
+0003EF  @FTOSD
+0004A8  @FLT
+0004E7  @PSTRINGC7_639
+00053D  Freq30KHz
+00056C  Freq170KHz
+00059B  Operatividad
+00059B  LeerTemp
+000627  Estado
+000762  FreqAcordeon
+0007BA  RetBoton
+000800  MAIN
+000800  @cinit1
+00082F  @cinit2
+
+Project Directory:
+    D:\Proyectos\Pediluvio\IonicPed Dual + Zapper Dual v886\Software\PID-ZD Basic\
+
+Project Files:
+    PID-ZD-Basic.c                                          [20-may-18 17:48  CRC=7C78A5A3]
+    C:\Program Files\PICC\Devices\16F886.h                  [12-nov-13 15:05  CRC=E3D32390]
+    C:\Program Files\PICC\Drivers\lcd.c                     [19-sep-13 16:08  CRC=D1A6378A]
+
+Source signature=03983847
+
+Units:
+    PID-ZD-Basic (main)
+
+Compiler Settings:
+    Processor:      PIC16F886
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   PID-ZD-Basic.xsym
+    Errors:      PID-ZD-Basic.err
+    Ext Symbols: PID-ZD-Basic.esym
+    INHX8:       PID-ZD-Basic.hex
+    Symbols:     PID-ZD-Basic.sym
+    List:        PID-ZD-Basic.lst
+    Debug/COFF:  PID-ZD-Basic.cof
+    Project:     PID-ZD-Basic.ccspjt
+    Call Tree:   PID-ZD-Basic.tre
+    Statistics:  PID-ZD-Basic.STA
